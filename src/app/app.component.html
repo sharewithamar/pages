@@ -21,14 +21,15 @@
     </li>
   </ul>
 </nav>
-<!-- 
-<div>
-  <h4>{{ images[currentPage].title }}</h4>
-  <img [src]="images[currentPage].url" />
-</div> -->
 
-<div [ngSwitch]="currentPage">
+<div>
+  <h4 appClass>{{ images[currentPage].title }}</h4>
+  <img [src]="images[currentPage].url" />
+</div>
+
+<!-- <div [ngSwitch]="currentPage">
   <div *ngSwitchCase="0">Zero</div>
   <div *ngSwitchCase="1">One</div>
   <div *ngSwitchDefault>Unknown</div>
 </div>
+ -->
