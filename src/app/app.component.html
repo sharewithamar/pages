@@ -1,10 +1,13 @@
 <nav>
   <ul class="pagination">
     <li class="page-item" [appClass]="{ disabled: currentPage === 0 }">
-      <a (click)="currentPage = currentPage - 1" class="page-link">Prev</a>
+      <a (click)="currentPage = currentPage - 1" class="page-link">Pre</a>
     </li>
     <!-- [ngClass] attribute directive can even take array of classes -->
-    <ng-container *ngFor="let image of images; let i = index">
+    <!--  replacing *ngFor with custom *appTimes
+        <ng-container *ngFor="let image of images; let i = index">
+ -->
+    <ng-container *appTimes="images.length; let i = index; let c = color">
       <li
         class="page-item"
         [appClass]="{ active: i === currentPage }"
